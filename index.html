@@ -6,16 +6,20 @@
 <title>Revolução Industrial - História em Site</title>
 <style>
   * { box-sizing: border-box; }
-  body {
+  html, body {
     margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Impede rolagem horizontal */
+    overscroll-behavior: none; /* Impede o efeito de mola/arrastar ao rolar além dos limites */
+  }
+  body {
     font-family: Arial, Helvetica, sans-serif;
     background: #1e1e1e;
     color: #e6e6e6;
     line-height: 1.6;
-    overflow-x: hidden; /* Impede a rolagem horizontal indesejada */
   }
   img {
-    max-width: 100%; /* Garante que nenhuma imagem estoure a largura da tela */
+    max-width: 100%;
   }
   header.topo {
     background: #2a2a2a;
@@ -88,7 +92,7 @@
     flex: 1;
   }
   footer .logo-escola {
-    width: 120px; /* Ajuste o tamanho necessário para a logo */
+    width: 120px;
     height: auto;
     margin-left: 20px;
   }
