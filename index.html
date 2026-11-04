@@ -7,126 +7,350 @@
     <style>
         body {
             background-color: #121212;
-            color: #e0e0e0;
-            font-family: Arial, sans-serif;
+            color: #d1d5db;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             line-height: 1.6;
         }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 40px;
+        }
+
+        /* Topo / Header */
         header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             border-bottom: 1px solid #333;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        h1, h2, h3 {
-            color: #ffffff;
-        }
-        ul {
-            background: #1e1e1e;
-            padding: 15px 20px 15px 40px;
-            border-radius: 5px;
-        }
-        a {
-            color: #4dabf7;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        section {
+            padding: 15px 0;
             margin-bottom: 30px;
         }
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            margin-top: 10px;
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ffffff;
         }
-        footer {
-            text-align: center;
-            margin-top: 40px;
+
+        .domain {
             color: #888;
-            font-size: 0.9em;
+            font-size: 0.9rem;
+        }
+
+        /* Tópicos / Navegação */
+        nav h2 {
+            font-size: 1.4rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 40px;
+        }
+
+        nav ul li {
+            margin-bottom: 6px;
+        }
+
+        nav ul li a {
+            color: #90caf9;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Seções e Tipografia */
+        h2.section-title {
+            font-size: 1.8rem;
+            color: #ffffff;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #2a2a2a;
+            padding-bottom: 10px;
+        }
+
+        h3.subsection-title {
+            font-size: 1.4rem;
+            color: #ffffff;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 18px;
+            text-align: justify;
+            color: #cccccc;
+        }
+
+        ul {
+            margin-bottom: 20px;
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Blocos com Imagens */
+        .content-with-image {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .content-with-image .text {
+            flex: 1;
+        }
+
+        .content-with-image .image-container {
+            width: 320px;
+            flex-shrink: 0;
+        }
+
+        .content-with-image img, .full-width-img img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            border: 1px solid #333;
+        }
+
+        .full-width-img {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        /* Rodapé Atualizado */
+        footer {
+            border-top: 1px solid #333;
+            padding: 30px 0;
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .footer-text {
+            flex: 1;
+        }
+
+        .footer-text p {
+            margin: 5px 0;
+            text-align: left;
+            color: #aaa;
+        }
+
+        .school-logo {
+            width: 70px;
+            height: auto;
+            flex-shrink: 0;
+        }
+
+        /* Responsividade para celulares */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            .content-with-image {
+                flex-direction: column;
+            }
+            .content-with-image .image-container {
+                width: 100%;
+            }
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-text p {
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>História em Site</h1>
-        <p>Tudo sobre a Revolução Industrial</p>
-    </header>
+    <div class="container">
+        <!-- CABEÇALHO -->
+        <header>
+            <div class="logo">História em Site</div>
+            <div class="domain">historiaemsite.com.br</div>
+        </header>
 
-    <nav>
-        <h3>Tópicos</h3>
-        <ul>
-            <li><a href="#o-que-foi">O que foi a Revolução Industrial?</a></li>
-            <li><a href="#causas">Causas da Revolução Industrial e o pioneirismo inglês</a></li>
-            <li><a href="#fases">Fases da Revolução Industrial</a></li>
-            <li><a href="#trabalhador">O trabalhador na Revolução Industrial</a></li>
-            <li><a href="#consequencias">Consequências da Revolução Industrial</a></li>
-            <li><a href="#resumo">Resumo</a></li>
-            <li><a href="#mapa-mental">Mapa mental</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <section id="o-que-foi">
-            <h2>O que foi a Revolução Industrial?</h2>
-            <p>A Revolução Industrial foi um processo de profundas transformações econômicas, sociais, culturais e tecnológicas que teve início na Inglaterra em meados do século XVIII.</p>
-        </section>
-
-        <section id="causas">
-            <h2>Causas da Revolução Industrial e o pioneirismo inglês</h2>
-            <p>A Inglaterra destacou-se como pioneira devido a fatores como o acúmulo de capital, a abundância de carvão mineral e minério de ferro, cercamentos dos campos e uma burguesia forte no poder político.</p>
-        </section>
-
-        <section id="fases">
-            <h2>Fases da Revolução Industrial</h2>
+        <!-- MENU DE TÓPICOS -->
+        <nav>
+            <h2>Tópicos</h2>
             <ul>
-                <li>Primeira Revolução Industrial</li>
-                <li>Segunda Revolução Industrial</li>
-                <li>Terceira Revolução Industrial</li>
+                <li><a href="#oque-foi">O que foi a Revolução Industrial?</a></li>
+                <li><a href="#causas">Causas da Revolução Industrial e o pioneirismo inglês</a></li>
+                <li><a href="#fases">Fases da Revolução Industrial</a></li>
+                <li><a href="#primeira-fase">Primeira Revolução Industrial</a></li>
+                <li><a href="#segunda-fase">Segunda Revolução Industrial</a></li>
+                <li><a href="#terceira-fase">Terceira Revolução Industrial</a></li>
+                <li><a href="#trabalhador">O trabalhador na Revolução Industrial</a></li>
+                <li><a href="#consequencias">Consequências da Revolução Industrial</a></li>
+                <li><a href="#resumo">Resumo</a></li>
+                <li><a href="#mapa-mental">Mapa mental com resumo</a></li>
             </ul>
+        </nav>
 
-            <h3 id="primeira">→ Primeira Revolução Industrial</h3>
-            <p>Marcada pelo uso do carvão como fonte de energia e pelo tear mecânico e a máquina a vapor.</p>
+        <main>
+            <!-- O QUE FOI -->
+            <section id="oque-foi">
+                <h2 class="section-title">O que foi a Revolução Industrial?</h2>
+                <p>A Revolução Industrial foi o período de grande desenvolvimento tecnológico que se iniciou na Inglaterra a partir da segunda metade do século XVIII.</p>
+                <p>A partir de então, verificou-se a transição da manufatura para a maquinofatura, ou seja, o trabalho manual foi substituído pelo trabalho realizado por máquinas. Esse processo de transformação alterou profundamente a economia, a sociedade, a cultura e a política.</p>
+                <p>A Revolução Industrial dividiu-se em três grandes momentos, sendo que cada um deles é marcado por avanços científicos e tecnológicos específicos. A partir de meados do século XVIII, iniciou-se a Primeira Revolução Industrial, estendendo-se até meados do século XIX.</p>
+            </section>
 
-            <h3 id="segunda">→ Segunda Revolução Industrial</h3>
-            <p>Marcada pelo uso do petróleo, da eletricidade e do aço.</p>
+            <!-- CAUSAS -->
+            <section id="causas">
+                <h2 class="section-title">Causas da Revolução Industrial e o pioneirismo inglês</h2>
+                <p>O pioneirismo inglês na Revolução Industrial ocorreu devido a um conjunto de fatores: acúmulo de capital por meio do comércio internacional e da exploração colonial; grande quantidade de mão de obra disponível devido ao processo de cercamento dos campos (enclosure acts); e a existência de abundantes reservas de carvão mineral e minério de ferro no subsolo inglês.</p>
+                <p>Além disso, a Inglaterra contava com uma burguesia forte e no poder desde a Revolução Gloriosa de 1688, que estabeleceu a monarquia parlamentarista e criou condições favoráveis ao desenvolvimento do capitalismo e ao investimento em infraestrutura, como a construção de estradas, canais e ferrovias.</p>
+                <p>Outro elemento importante foi a inovação tecnológica da época, representada principalmente pela máquina a vapor, desenvolvida por James Watt. Ela permitiu a substituição da energia humana e animal pela energia motriz gerada pela queima do carvão mineral, aumentando drasticamente a capacidade produtiva das indústrias de tecidos e no transporte marítimo e ferroviário.</p>
+            </section>
 
-            <h3 id="terceira">→ Terceira Revolução Industrial</h3>
-            <p>Também conhecida como Revolução Técnico-Científica-Informativa, focada em tecnologia da informação e automação.</p>
-        </section>
+            <!-- FASES -->
+            <section id="fases">
+                <h2 class="section-title">Fases da Revolução Industrial</h2>
+                <p>A Revolução Industrial é dividida tradicionalmente em três fases principais. Cada fase representa uma etapa de avanços tecnológicos e de expansão do sistema industrial no planeta. Essas fases demonstram como as inovações técnicas alteraram não apenas os métodos de produção, mas também as relações de trabalho e o alcance global do capitalismo.</p>
+                <ul>
+                    <li>Primeira Revolução Industrial</li>
+                    <li>Segunda Revolução Industrial</li>
+                    <li>Terceira Revolução Industrial</li>
+                </ul>
 
-        <section id="trabalhador">
-            <h2>O trabalhador na Revolução Industrial</h2>
-            <p>As condições de trabalho eram extremamente precárias, com jornadas exaustivas de até 16 horas diárias, ambientes insalubres e uso intenso de mão de obra infantil.</p>
-        </section>
+                <!-- PRIMEIRA FASE -->
+                <div id="primeira-fase">
+                    <h3 class="subsection-title">➔ Primeira Revolução Industrial</h3>
+                    <div class="content-with-image">
+                        <div class="text">
+                            <p>A Primeira Revolução Industrial ocorreu entre a segunda metade do século XVIII e meados do século XIX. Teve como centro a Inglaterra e caracterizou-se pelo surgimento das primeiras fábricas, o uso da energia a vapor e o desenvolvimento da indústria têxtil. O carvão mineral tornou-se a principal fonte de energia da época.</p>
+                            <ul>
+                               <li>Uso do carvão mineral como fonte de energia para movimentar máquinas e locomotivas;</li>
+                               <li>Desenvolvimento da indústria têxtil de algodão e de máquinas de fiar;</li>
+                               <li>Invenção da locomotiva e do navio a vapor.</li>
+                            </ul>
+                            <p>Algumas inovações tecnológicas marcantes desse período incluem:</p>
+                            <ul>
+                                <li>A máquina a vapor aperfeiçoada por James Watt;</li>
+                                <li>O tear mecânico, que aumentou drasticamente a produção de tecidos;</li>
+                                <li>A locomotiva a vapor (Maria Fumaça), que revolucionou o transporte terrestre de cargas e passageiros.</li>
+                            </ul>
+                            <p>Essa fase transformou radicalmente a estrutura econômica, pois o trabalho artesanal e familiar foi substituído pelo trabalho assalariado nas fábricas sob uma nova disciplina rígida de tempo e produção.</p>
+                        </div>
+                        <div class="image-container">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Locomotive_John_Bull.jpg" alt="Locomotiva a vapor - Primeira Revolução Industrial">
+                        </div>
+                    </div>
+                </div>
 
-        <section id="consequencias">
-            <h2>Consequências da Revolução Industrial</h2>
-            <p>Entre as principais consequências estão o surgimento do capitalismo industrial, a consolidação da classe burguesa e do proletariado, além do forte impacto ambiental.</p>
-        </section>
+                <!-- SEGUNDA FASE -->
+                <div id="segunda-fase">
+                    <h3 class="subsection-title">➔ Segunda Revolução Industrial</h3>
+                    <div class="content-with-image">
+                        <div class="text">
+                            <p>A Segunda Revolução Industrial ocorreu entre a segunda metade do século XIX e meados do século XX. O processo industrial ultrapassou as fronteiras da Inglaterra e se expandiu para outros países da Europa (como Alemanha e França), Estados Unidos e Japão. Foi marcada pelo surgimento da eletricidade, uso do petróleo e produção de aço.</p>
+                            <p>A produção industrial passou a utilizar novos métodos de organização do trabalho, como o Taylorismo e o Fordismo, visando aumentar a eficiência e a produção em massa. Houve a criação das linhas de montagem, a expansão das ferrovias e o desenvolvimento das indústrias química, siderúrgica e automobilística.</p>
+                            <p>Nesta fase, a eletricidade substituiu o vapor em grande parte dos processos fabris, os motores a combustão interna permitiram a invenção do automóvel e do avião, e as telecomunicações se desenvolveram rapidamente com a invenção do telégrafo e do telefone.</p>
+                        </div>
+                        <div class="image-container">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Ford_assembly_line_-_1913.jpg" alt="Linha de montagem Ford - Segunda Revolução Industrial">
+                        </div>
+                    </div>
+                </div>
 
-        <section id="resumo">
-            <h2>Resumo</h2>
-            <ul>
-                <li>Transformou a economia agrária em industrial.</li>
-                <li>Iniciou-se na Inglaterra no século XVIII.</li>
-                <li>Gerou forte urbanização e novas classes sociais.</li>
-            </ul>
-        </section>
+                <!-- TERCEIRA FASE -->
+                <div id="terceira-fase">
+                    <h3 class="subsection-title">➔ Terceira Revolução Industrial</h3>
+                    <div class="content-with-image">
+                        <div class="text">
+                            <p>A Terceira Revolução Industrial, também conhecida como Revolução Técnico-Científica-Informativa, teve início na segunda metade do século XX (especialmente a partir da década de 1970) e se estende até a atualidade. Ela é caracterizada pela integração da ciência, da tecnologia e da produção industrial.</p>
+                            <p>O grande motor dessa fase é o desenvolvimento da informática, da microeletrônica, da robótica, das telecomunicações e da biotecnologia. A automação das fábricas reduziu a necessidade de mão de obra direta na produção física, transferindo trabalhadores para o setor de serviços.</p>
+                            <p>A globalização se intensificou fortemente com a expansão da internet e das redes de computadores, permitindo a circulação instantânea de informações e capitais pelo mundo todo e a reorganização da produção em escala global.</p>
+                        </div>
+                        <div class="image-container">
+                            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=400&q=80" alt="Robótica e tecnologia - Terceira Revolução Industrial">
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <section id="mapa-mental">
-            <h2>Mapa mental com resumo sobre a Revolução Industrial</h2>
-            <p>Adicione a imagem do seu mapa mental aqui depois.</p>
-        </section>
-    </main>
+            <!-- TRABALHADOR -->
+            <section id="trabalhador">
+                <h2 class="section-title">O trabalhador na Revolução Industrial</h2>
+                <p>Com a instalação das fábricas, os camponeses expulsos do campo pelo processo de cercamento migraram para as cidades em busca de trabalho, formando o proletariado industrial. No entanto, as condições de trabalho e de vida nas cidades eram extremamente precárias.</p>
+                <p>Diferente do trabalho artesanal pré-industrial, no qual o trabalhador controlava seu tempo e processo de produção, na fábrica o operário passou a estar sujeito ao ritmo imposto pelas máquinas e à rígida supervisão do dono da fábrica (burguês).</p>
+                
+                <div class="content-with-image">
+                    <div class="text">
+                        <p>As jornadas de trabalho duravam entre 14 e 16 horas diárias, sem férias, descanso semanal remunerado ou direitos trabalhistas. Os ambientes das fábricas eram escuros, úmidos, sem ventilação adequada e com alto risco de acidentes graves nas máquinas, sem qualquer indenização ao trabalhador.</p>
+                        <p>Além disso, os salários pagos eram miseráveis, o que forçava famílias inteiras — incluindo mulheres e crianças a partir dos 6 anos de idade — a trabalharem nas fábricas. A mão de obra feminina e infantil era preferida pelos patrões porque recebia salários ainda menores e era considerada mais fácil de controlar.</p>
+                        <p>Diante dessa brutal exploração, os trabalhadores passaram a se organizar para lutar por melhores condições de vida e trabalho, dando origem ao movimento operário. Entre os principais movimentos destacam-se:</p>
+                        <ul>
+                            <li><strong>Ludismo:</strong> movimento ocorrido no início do século XIX em que os trabalhadores invadiam as fábricas para quebrar as máquinas, vistas por eles como responsáveis pelo desemprego e salários miseráveis.</li>
+                            <li><strong>Cartismo:</strong> movimento surgido na Inglaterra na década de 1830 que buscava direitos políticos e trabalhistas por meio da "Carta do Povo" enviada ao Parlamento Inglês.</li>
+                        </ul>
+                    </div>
+                    <div class="image-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Child_laborer_in_a_cotton_mill.jpg" alt="Trabalho infantil na Revolução Industrial">
+                    </div>
+                </div>
 
-    <footer>
-        <p>&copy; 2026 História em Site. Todos os direitos reservados.</p>
-    </footer>
+                <p>Com a pressão dos movimentos operários e as constantes greves, ao longo do século XIX o Parlamento britânico começou a aprovar as primeiras leis trabalhistas, limitando a jornada de trabalho de crianças e mulheres e gradual melhoria nas condições fabris.</p>
+            </section>
+
+            <!-- CONSEQUÊNCIAS -->
+            <section id="consequencias">
+                <h2 class="section-title">Consequências da Revolução Industrial</h2>
+                <p>A Revolução Industrial provocou transformações radicais na sociedade humana. Uma das principais consequências foi a consolidação do capitalismo como sistema econômico dominante e a divisão clara da sociedade em duas classes sociais antagônicas: a burguesia (proprietária dos meios de produção) e o proletariado (trabalhadores assalariados).</p>
+                <p>Outra consequência marcante foi o intenso processo de urbanização desordenada. As cidades cresceram rapidamente sem infraestrutura básica de saneamento, habitação e saúde pública, originando bairros operários insalubres onde epidemias de doenças como cólera e tifo eram frequentes.</p>
+                <p>No âmbito global, a busca incessante por matérias-primas (como carvão, petróleo, algodão e minérios) e mercados consumidores impulsionou a expansão do Imperialismo (Neocolonialismo) no século XIX, resultando no domínio e exploração de territórios na África e na Ásia pelas potências industriais europeias.</p>
+            </section>
+
+            <!-- RESUMO -->
+            <section id="resumo">
+                <h2 class="section-title">Resumo</h2>
+                <ul>
+                    <li>A Revolução Industrial foi o processo de transição da manufatura para a maquinofatura iniciado na Inglaterra no século XVIII.</li>
+                    <li>O pioneirismo inglês ocorreu pelo acúmulo de capitais, mão de obra abundante (cercamentos), jazidas de carvão e ferro, e estabilidade política.</li>
+                    <li>Dividiu-se em três fases: 1ª Fase (vapor e carvão), 2ª Fase (eletricidade, aço e petróleo) e 3ª Fase (tecnologia, robótica e informática).</li>
+                    <li>As condições de trabalho eram abusivas, com longas jornadas (14 a 16h), salários baixos e uso intenso de trabalho infantil e feminino.</li>
+                    <li>O sofrimento operário deu origem aos primeiros movimentos sociais de trabalhadores, como o Ludismo (quebra das máquinas) e o Cartismo.</li>
+                    <li>Principais consequências: consolidação do capitalismo, urbanização acelerada, divisão social entre burguesia e proletariado e a corrida imperialista.</li>
+                </ul>
+            </section>
+
+            <!-- MAPA MENTAL -->
+            <section id="mapa-mental">
+                <h2 class="section-title">Mapa mental com resumo sobre a Revolução Industrial</h2>
+                <div class="full-width-img">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Mapa Mental sobre a Revolução Industrial">
+                </div>
+            </section>
+        </main>
+
+        <!-- RODAPÉ ATUALIZADO COM OS DADOS DA ESCOLA -->
+        <footer>
+            <div class="footer-text">
+                <p><strong>Grupo:</strong> Kauã A., Albert, Daniel, Thiago, Christian, Isaque.</p>
+                <p>Site desenvolvido pelos alunos da Escola Técnica Estadual Ginásio Pernambucano, da sala 2 ADS como trabalho de História sobre Revolução Industrial, provido pelo Professor Wellington.</p>
+            </div>
+            <!-- Substitua o link abaixo pela URL real da logo da sua escola no GitHub -->
+            <img src="logo-escola.png" alt="Logo ETE Ginásio Pernambucano" class="school-logo">
+        </footer>
+    </div>
 
 </body>
 </html>
